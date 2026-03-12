@@ -1,71 +1,227 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="de" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>*|MC:SUBJECT|*</title>
+  <meta name="color-scheme" content="light dark">
+  <title>Newsletter</title>
   <style type="text/css">
-    body, table, td { font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #333333; }
-    body { margin: 0; padding: 0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-    table { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-    img { border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; }
-    a { color: #007C89; text-decoration: underline; }
-    @media only screen and (max-width: 600px) {
-      .email-container { width: 100% !important; }
-      .fluid { max-width: 100% !important; height: auto !important; }
-      .stack-column { display: block !important; width: 100% !important; }
+    body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+    table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+    img { border: 0; display: block; }
+    body { margin: 0; padding: 0; background-color: #FFFFFF; }
+
+    @media only screen and (max-width: 620px) {
+      .main { width: 100% !important; }
+      .pad { padding: 32px 24px !important; }
     }
   </style>
 </head>
-<body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+<body style="margin:0; padding:0; background-color:#FFFFFF;">
 
-  <!-- Preview Text -->
-  <div style="display: none; max-height: 0; overflow: hidden;">
-    Preview text shown in inbox before opening.
+  <!-- Preheader -->
+  <div style="display:none; max-height:0; overflow:hidden; font-size:1px; color:#F5F4F0;">
+    Dein Newsletter für [Monat] – Neuigkeiten & Termine.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌
   </div>
 
-  <!-- Email Wrapper -->
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color: #f4f4f4;">
+  <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color:#FFFFFF;">
     <tr>
-      <td align="center" style="padding: 20px 10px;">
+      <td align="center" style="padding: 40px 16px;">
+        <table class="main" width="560" cellpadding="0" cellspacing="0" border="0" style="max-width:560px; width:100%;">
 
-        <!-- Email Container -->
-        <table role="presentation" class="email-container" width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff;">
 
-          <!-- Header -->
-          <tr>
-            <td style="padding: 30px 40px; text-align: center; background-color: #007C89;">
-              <img src="https://via.placeholder.com/200x50" alt="Logo" width="200" style="max-width: 200px;">
+          <!-- HEADER -->
+           <tr>
+            <td style="padding:0; font-size:0; line-height:0; padding: 32px 48px;">
+              <!--
+                Bild-Crop-Trick für Email:
+                Das <td> hat eine feste Höhe. Das Bild ist breiter als der Container
+                und wird mit max-width:none + margin-left negativ versetzt — oder
+                einfacher: width:100%, height wird durch den Container begrenzt,
+                overflow:hidden simuliert via max-height auf dem td.
+ 
+                Empfohlene Bildgröße: mind. 1120px × 420px (2x für Retina)
+                Das Bild wird auf 560px Breite skaliert und auf 220px Höhe gecroppt.
+              -->
+              <div style="overflow:hidden; line-height:0; font-size:0;">
+                <img
+                  src="assets/UBU-logo.jpg"
+                  width="560"
+                  alt="Beschreibung des Bildes"
+                  style="display:block; width:100%; max-width:560px; height:auto; object-fit:cover; object-position:center;"
+                >
+              </div>
             </td>
           </tr>
 
-          <!-- Body -->
+          <!-- DIVIDER -->
           <tr>
-            <td style="padding: 40px;">
-              <h1 style="margin: 0 0 20px; font-size: 24px; color: #333333;">Your Headline Here</h1>
-              <p style="margin: 0 0 20px; line-height: 1.6;">
-                Email body content goes here. Use Mailchimp merge tags like *|FNAME|* for personalization.
-              </p>
-              <!-- CTA Button -->
-              <table role="presentation" cellpadding="0" cellspacing="0" style="margin: 30px 0;">
+            <td class="bg" style="background-color:#FFFFFF; padding: 0 48px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
                 <tr>
-                  <td style="border-radius: 4px; background-color: #007C89;">
-                    <a href="https://" target="_blank" style="display: inline-block; padding: 14px 30px; color: #ffffff; text-decoration: none; font-weight: bold;">Call to Action</a>
+                  <td class="divider" style="border-top: 1px solid #ECEAE4; font-size:0; line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+          <!-- BRIEF -->
+          <tr>
+            <td class="bg pad" style="background-color:#FFFFFF; padding: 32px 48px;">
+
+              <p style="margin:0 0 4px 0; font-family: Arial, sans-serif; font-size:11px; color:#9A9890; letter-spacing:2px; text-transform:uppercase;">Newsletter</p>
+              <h1 style="margin:0 0 24px 0; font-family: Georgia, serif; font-size:26px; line-height:36px; color:#1C1C1A; font-weight:700; letter-spacing:-0.5px;">
+                Hallo [Vorname],
+              </h1>
+
+              <p style="margin:0 0 18px 0; font-family: Arial, sans-serif; font-size:15px; line-height:26px; color:#3A3A38;">
+                Hier beginnt dein persönlicher Brief an die Leserinnen und Leser. Schreib locker und direkt – so als würdest du jemandem eine E-Mail schicken, den du gut kennst.
+              </p>
+              <p style="margin:0 0 18px 0; font-family: Arial, sans-serif; font-size:15px; line-height:26px; color:#3A3A38;">
+                Ein zweiter Absatz gibt dir Raum, ein Thema zu vertiefen oder eine persönliche Geschichte zu erzählen. Das macht Newsletter authentisch und lesenswert.
+              </p>
+              <p style="margin:0; font-family: Arial, sans-serif; font-size:15px; line-height:26px; color:#3A3A38;">
+                Bis bald,<br>
+                <span style="font-family: Georgia, serif; font-size:17px; color:#1C1C1A; font-style:italic;">Dein Name</span>
+              </p>
+
+            </td>
+          </tr>
+
+
+          <!-- DIVIDER -->
+          <tr>
+            <td class="bg" style="background-color:#FFFFFF; padding: 0 48px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td class="divider" style="border-top: 1px solid #ECEAE4; font-size:0; line-height:0;">&nbsp;</td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+
+            <tr>
+            <td style="padding:0; font-size:0; line-height:0; padding: 32px 48px;">
+              <!--
+                Bild-Crop-Trick für Email:
+                Das <td> hat eine feste Höhe. Das Bild ist breiter als der Container
+                und wird mit max-width:none + margin-left negativ versetzt — oder
+                einfacher: width:100%, height wird durch den Container begrenzt,
+                overflow:hidden simuliert via max-height auf dem td.
+ 
+                Empfohlene Bildgröße: mind. 1120px × 420px (2x für Retina)
+                Das Bild wird auf 560px Breite skaliert und auf 220px Höhe gecroppt.
+              -->
+              <div style="max-height:220px; overflow:hidden; line-height:0; font-size:0;">
+                <img
+                  src="assets/hero-image.jpg"
+                  width="560"
+                  alt="Beschreibung des Bildes"
+                  style="display:block; width:100%; max-width:560px; height:220px; object-fit:cover; object-position:center;"
+                >
+              </div>
+            </td>
+          </tr>
+          <!-- TERMINE -->
+          <tr>
+            <td class="bg pad" style="background-color:#FFFFFF; padding: 32px 48px 36px 48px;">
+
+              <p style="margin:0 0 20px 0; font-family: Arial, sans-serif; font-size:11px; color:#9A9890; letter-spacing:2px; text-transform:uppercase;">Anstehende Termine</p>
+
+              <!-- Termin 1 -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+                <tr valign="top">
+                  <td width="64" style="padding-right:16px; padding-top:2px;">
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:11px; font-weight:700; color:#9A9890; letter-spacing:1px; text-transform:uppercase; line-height:20px;">15. Mär</p>
+                  </td>
+                  <td>
+                    <p style="margin:0 0 3px 0; font-family: Arial, sans-serif; font-size:15px; font-weight:700; color:#1C1C1A;">Titel des Termins</p>
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:13px; line-height:21px; color:#6A6A68;">
+                      Kurze Beschreibung – Ort, Uhrzeit oder weitere Infos.
+                      <a href="https://beispiel.de" style="color:#1C1C1A; text-decoration:underline;">Mehr →</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Termin 2 -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:20px;">
+                <tr valign="top">
+                  <td width="64" style="padding-right:16px; padding-top:2px;">
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:11px; font-weight:700; color:#9A9890; letter-spacing:1px; text-transform:uppercase; line-height:20px;">22. Mär</p>
+                  </td>
+                  <td>
+                    <p style="margin:0 0 3px 0; font-family: Arial, sans-serif; font-size:15px; font-weight:700; color:#1C1C1A;">Titel des Termins</p>
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:13px; line-height:21px; color:#6A6A68;">
+                      Kurze Beschreibung – Ort, Uhrzeit oder weitere Infos.
+                      <a href="https://beispiel.de" style="color:#1C1C1A; text-decoration:underline;">Mehr →</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Termin 3 -->
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr valign="top">
+                  <td width="64" style="padding-right:16px; padding-top:2px;">
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:11px; font-weight:700; color:#9A9890; letter-spacing:1px; text-transform:uppercase; line-height:20px;">4. Apr</p>
+                  </td>
+                  <td>
+                    <p style="margin:0 0 3px 0; font-family: Arial, sans-serif; font-size:15px; font-weight:700; color:#1C1C1A;">Titel des Termins</p>
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:13px; line-height:21px; color:#6A6A68;">
+                      Kurze Beschreibung – Ort, Uhrzeit oder weitere Infos.
+                      <a href="https://beispiel.de" style="color:#1C1C1A; text-decoration:underline;">Mehr →</a>
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+            </td>
+          </tr>
+
+
+          <!-- FOOTER -->
+          <tr>
+            <td style="padding: 24px 48px 0 48px;">
+              <table width="100%" cellpadding="0" cellspacing="0" border="0">
+                <tr>
+                  <td style="border-top: 1px solid #DDDBD6; padding-top:24px; text-align:center;">
+
+                    <!-- Social / Links -->
+                    <table align="center" cellpadding="0" cellspacing="0" border="0" style="margin-bottom:16px;">
+                      <tr>
+                        <td style="padding: 0 12px;">
+                          <a href="https://instagram.com/deinname" style="font-family: Arial, sans-serif; font-size:13px; color:#6A6A68; text-decoration:none;">Instagram</a>
+                        </td>
+                        <td style="font-family: Arial, sans-serif; font-size:13px; color:#BDBBB6;">·</td>
+                        <td style="padding: 0 12px;">
+                          <a href="mailto:hallo@beispiel.de" style="font-family: Arial, sans-serif; font-size:13px; color:#6A6A68; text-decoration:none;">E-Mail</a>
+                        </td>
+                        <td style="font-family: Arial, sans-serif; font-size:13px; color:#BDBBB6;">·</td>
+                        <td style="padding: 0 12px;">
+                          <a href="https://beispiel.de" style="font-family: Arial, sans-serif; font-size:13px; color:#6A6A68; text-decoration:none;">Website</a>
+                        </td>
+                      </tr>
+                    </table>
+
+                    <p style="margin:0 0 6px 0; font-family: Arial, sans-serif; font-size:11px; color:#BDBBB6;">
+                      Du erhältst diesen Newsletter, weil du dich angemeldet hast.
+                    </p>
+                    <p style="margin:0; font-family: Arial, sans-serif; font-size:11px; color:#BDBBB6;">
+                      <a href="https://beispiel.de/abmelden" style="color:#BDBBB6; text-decoration:underline;">Abmelden</a>
+                      &nbsp;·&nbsp;
+                      <a href="https://beispiel.de/impressum" style="color:#BDBBB6; text-decoration:underline;">Impressum</a>
+                    </p>
+
                   </td>
                 </tr>
               </table>
             </td>
           </tr>
 
-          <!-- Footer -->
-          <tr>
-            <td style="padding: 30px 40px; background-color: #f4f4f4; font-size: 12px; color: #999999; text-align: center;">
-              <p style="margin: 0 0 10px;">*|LIST:COMPANY|* &middot; *|LIST:ADDRESS|*</p>
-              <p style="margin: 0 0 10px;"><a href="*|UPDATE_PROFILE|*" style="color: #999999;">Update preferences</a> &middot; <a href="*|UNSUB|*" style="color: #999999;">Unsubscribe</a></p>
-              <p style="margin: 0;">*|LIST:DESCRIPTION|*</p>
-            </td>
-          </tr>
 
         </table>
       </td>
